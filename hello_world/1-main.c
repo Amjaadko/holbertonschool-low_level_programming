@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    printf("Hello, Holberton!\n");
-    return (0);
+printf("Hello, Holberton!\n");
+return (0);
 }
 

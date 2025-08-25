@@ -1,4 +1,2 @@
 #!/bin/bash
-# 1-compiler: Compile the C file stored in $CFILE
-
-gcc "$CFILE" -o "${CFILE%.c}"
+gcc -c "$CFILE"

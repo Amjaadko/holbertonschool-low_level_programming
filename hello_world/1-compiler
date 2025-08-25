@@ -1,2 +1,5 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 "$CFILE" -o "${CFILE%.c}"
+# 1-compiler: Compile the C file stored in $CFILE
+
+gcc -c "$CFILE"
+

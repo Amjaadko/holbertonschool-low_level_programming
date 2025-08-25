@@ -2,4 +2,3 @@
 # 1-compiler: Compile the C file stored in $CFILE
 
 gcc -c "$CFILE"
-

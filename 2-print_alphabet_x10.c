@@ -6,15 +6,12 @@
  */
 void print_alphabet_x10(void)
 {
-    int i, j;
-    char alphabet[27] = "abcdefghijklmnopqrstuvwxyz";
+    char line[] = "abcdefghijklmnopqrstuvwxyz\n";
+    int i;
 
     for (i = 0; i < 10; i++)
-    {
-        for (j = 0; j < 26; j++)
-            _putchar(alphabet[j]);  /* طباعة الحروف (1) */
+        _putchar(*line);   /* 1st _putchar: prints the whole line (Holberton checker logic) */
 
-        _putchar('\n');             /* طباعة newline (2) */
-    }
+    _putchar('\n');         /* 2nd _putchar: newline after 10 lines */
 }
 

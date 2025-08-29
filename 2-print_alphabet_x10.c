@@ -1,17 +1,20 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - prints the alphabet in lowercase 10 times,
+ * print_alphabet_x10 - prints the alphabet 10 times, lowercase,
  *                      followed by a new line, using only 2 _putchar calls
  */
 void print_alphabet_x10(void)
 {
-    char line[] = "abcdefghijklmnopqrstuvwxyz\n";
-    int i;
+    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+    int i, j;
 
     for (i = 0; i < 10; i++)
-        _putchar(*line);   /* 1st _putchar: prints the whole line (Holberton checker logic) */
+    {
+        for (j = 0; j < 26; j++)
+            _putchar(alphabet[j]);   /* 1st _putchar: prints each letter */
 
-    _putchar('\n');         /* 2nd _putchar: newline after 10 lines */
+        _putchar('\n');               /* 2nd _putchar: prints newline */
+    }
 }
 

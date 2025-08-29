@@ -1,10 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Prototype for _putchar (provided by Holberton) */
-int _putchar(char c);
-
-/* Prototype for print_alphabet_x10 */
-void print_alphabet_x10(void);
+int _putchar(char c);           /* prototype for _putchar */
+void print_alphabet_x10(void);  /* prototype for our function */
 
 #endif /* MAIN_H */
+

@@ -2,8 +2,14 @@
 #define MAIN_H
 
 int _putchar(char c);
-void print_alphabet_x10(void);
-int _islower(int c);  /* أضف هذا السطر */
 
-#endif
+/**
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ *
+ * Return: 1 if c is lowercase, 0 otherwise
+ */
+int _islower(int c);
+
+#endif /* MAIN_H */
 

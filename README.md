@@ -1,21 +1,22 @@
 # More Functions, Nested Loops
 
-## Project Requirements
+## Project Description
 
-This directory contains C functions for "More Functions, Nested Loops" tasks.
+This directory contains solutions for the "More Functions, Nested Loops" tasks in C.
 
-### Files:
+## Files
 
-- `0-isupper.c` : checks for uppercase character
-- `1-isdigit.c` : checks for a digit (0 through 9)
-- `2-mul.c` : multiplies two integers
-- `3-print_numbers.c` : prints numbers from 0 to 9 using only _putchar twice
-- `main.h` : header file containing all prototypes
+- `0-isupper.c` : checks if a character is uppercase  
+- `1-isdigit.c` : checks if a character is a digit (0-9)  
+- `2-mul.c` : multiplies two integers  
+- `3-print_numbers.c` : prints numbers from 0 to 9 using only _putchar twice  
+- `main.h` : header file containing all function prototypes  
 
-### Notes:
+## Notes
 
-- All files follow Betty coding style
-- No use of standard library functions except `_putchar`
-- Only 5 functions per file max
-- Each file ends with a new line
+- Betty coding style is used for all files  
+- No global variables  
+- No use of standard library functions except `_putchar`  
+- Maximum 5 functions per file  
+- All files end with a new line
 

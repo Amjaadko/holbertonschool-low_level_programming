@@ -1,19 +1,20 @@
-# More functions, more nested loops
+# more_functions_nested_loops
 
-This project is part of the **Holberton School Low Level Programming** curriculum.
+## Description
 
-## Requirements
-- All files are compiled on Ubuntu 20.04 LTS using `gcc` with flags:
-  `-Wall -Werror -Wextra -pedantic -std=gnu89`
-- Code follows the **Betty style**.
-- No use of global variables.
-- No more than 5 functions per file.
-- Standard library functions like `printf` are not allowed.
-- Only `_putchar` is allowed.
+This directory contains small C programs that practice using nested loops and functions.
 
 ## Files
-- `main.h` → Header file with all function prototypes.
-- `3-print_numbers.c` → Prints numbers from 0 to 9 followed by a new line.
 
-## Example
+- `3-print_numbers.c` - prints numbers from 0 to 9.
+- `4-print_most_numbers.c` - prints numbers from 0 to 9, except 2 and 4.
+- `main.h` - header file with function prototypes.
+- `_putchar.c` - provided utility for printing characters.
+
+## Usage
+
+Compile the programs with:
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _putchar.c <file>.c -o <output>
 

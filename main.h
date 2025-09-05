@@ -6,3 +6,9 @@ int _putchar(char c);
 
 #endif
 
+int _putchar(char c);
+void print_numbers(void);
+void print_most_numbers(void);
+
+#endif /* MAIN_H */
+

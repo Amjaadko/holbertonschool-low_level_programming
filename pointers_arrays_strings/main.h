@@ -1,7 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-char *_strncat(char *dest, char *src, int n);
+int _putchar(char c);
 
-#endif /* MAIN_H */
+/* جميع البروتوتايبس الأخرى */
+void puts2(char *str);
+
+#endif
 

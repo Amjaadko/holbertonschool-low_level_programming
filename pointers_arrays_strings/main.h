@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-char *cap_string(char *s);
+char *leet(char *str);
 
 /* _putchar.c */
 int _putchar(char c);

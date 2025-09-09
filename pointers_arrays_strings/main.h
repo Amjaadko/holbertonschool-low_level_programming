@@ -10,7 +10,7 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 void print_rev(char *s);
 char *_strstr(char *haystack, char *needle);
-
+void print_chessboard(char (*a)[8]);
 /* Add here prototypes for your other functions as needed */
 
 #endif /* MAIN_H */

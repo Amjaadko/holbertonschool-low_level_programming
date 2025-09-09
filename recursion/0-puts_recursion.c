@@ -6,13 +6,13 @@
  */
 void _puts_recursion(char *s)
 {
-	if (*s == '\0') /* قاعدة التوقف: نهاية السلسلة */
+	if (*s == '\0') /* base case: end of string */
 	{
 		_putchar('\n');
 		return;
 	}
 
-	_putchar(*s); /* طباعة الحرف الحالي */
-	_puts_recursion(s + 1); /* استدعاء الدالة لبقية السلسلة */
+	_putchar(*s); /* print current character */
+	_puts_recursion(s + 1); /* recursive call for next character */
 }
 

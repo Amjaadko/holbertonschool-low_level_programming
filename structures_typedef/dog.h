@@ -5,19 +5,21 @@
  * struct dog - معلومات عن كلب
  * @name: اسم الكلب
  * @age: عمر الكلب
- * @owner: اسم المالك
+ * @owner: صاحب الكلب
+ *
+ * Description: هيكل يحتوي على تفاصيل الكلب
  */
 struct dog
 {
-    char *name;
-    float age;
-    char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
 
 /**
- * dog_t - اسم جديد (typedef) للـ struct dog
+ * dog_t - تعريف جديد للـ struct dog
  */
 typedef struct dog dog_t;
 
-#endif
+#endif /* DOG_H */
 

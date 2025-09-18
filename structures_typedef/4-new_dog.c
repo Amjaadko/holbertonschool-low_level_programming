@@ -1,45 +1,27 @@
-#include <stdlib.h>
-#include <string.h>
-#include "dog.h"
+#ifndef DOG_H
+#define DOG_H
 
 /**
- * new_dog - ينشئ كلب جديد
- * @name: اسم الكلب
- * @age: عمر الكلب
- * @owner: صاحب الكلب
- *
- * Return: مؤشر للكلب الجديد، أو NULL إذا فشل
+ * struct dog - defines a dog
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  */
-dog_t *new_dog(char *name, float age, char *owner)
+struct dog
 {
-	dog_t *d;
-	char *new_name, *new_owner;
+    char *name;
+    float age;
+    char *owner;
+};
 
-	d = malloc(sizeof(dog_t));
-	if (!d)
-		return (NULL);
+/* typedef alias */
+typedef struct dog dog_t;
 
-	new_name = malloc(strlen(name) + 1);
-	if (!new_name)
-	{
-		free(d);
-		return (NULL);
-	}
-	strcpy(new_name, name);
+/* function prototypes */
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
 
-	new_owner = malloc(strlen(owner) + 1);
-	if (!new_owner)
-	{
-		free(new_name);
-		free(d);
-		return (NULL);
-	}
-	strcpy(new_owner, owner);
-
-	d->name = new_name;
-	d->age = age;
-	d->owner = new_owner;
-
-	return (d);
-}
+#endif
 

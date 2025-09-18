@@ -1,27 +1,38 @@
-#ifndef DOG_H
-#define DOG_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "dog.h"
 
-/**
- * struct dog - defines a dog
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
- */
-struct dog
+dog_t *new_dog(char *name, float age, char *owner)
 {
-    char *name;
-    float age;
-    char *owner;
-};
+    dog_t *d;
 
-/* typedef alias */
-typedef struct dog dog_t;
+    if (!name || !owner)
+        return (NULL);
 
-/* function prototypes */
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
-dog_t *new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
+    d = malloc(sizeof(dog_t));
+    if (!d)
+        return (NULL);
 
-#endif
+    d->name = malloc(strlen(name) + 1);
+    if (!d->name)
+    {
+        free(d);
+        return (NULL);
+    }
+    strcpy(d->name, name);
+
+    d->owner = malloc(strlen(owner) + 1);
+    if (!d->owner)
+    {
+        free(d->name);
+        free(d);
+        return (NULL);
+    }
+    strcpy(d->owner, owner);
+
+    d->age = age;
+
+    return (d);
+}
 

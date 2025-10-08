@@ -4,25 +4,12 @@
 
 #define BUFFER_SIZE 1024
 
-/**
- * error_exit - prints an error message to stderr and exits
- * @code: exit code
- * @message: error message format
- * @arg: argument (filename or fd value)
- */
 void error_exit(int code, const char *message, const char *arg)
 {
 	dprintf(STDERR_FILENO, message, arg);
 	exit(code);
 }
 
-/**
- * main - copies the content of one file to another
- * @argc: number of arguments
- * @argv: argument values
- *
- * Return: 0 on success
- */
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, rd, wr;
@@ -42,9 +29,11 @@ int main(int argc, char *argv[])
 	while ((rd = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		wr = write(fd_to, buffer, rd);
-		if (wr != rd)
+		if (wr == -1 || wr != rd)
 			error_exit(99, "Error: Can't write to %s\n", argv[2]);
 	}
+
+	/* مهم: إذا read رجعت -1 لازم نطبع 98 */
 	if (rd == -1)
 		error_exit(98, "Error: Can't read from file %s\n", argv[1]);
 
